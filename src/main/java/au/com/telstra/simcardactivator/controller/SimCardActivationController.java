@@ -37,7 +37,7 @@ public class SimCardActivationController {
      * This method handles POST requests to activate a SIM card.
      * It takes a SimCardActivationRequest object as input and returns a ResponseEntity containing the activation response.
      */
-    @PostMapping("/actuate")
+    @PostMapping("/activate")
     public ResponseEntity<SimCardActivationResponse> activateSimCard(@RequestBody SimCardActivationRequest request) {
         logger.info("Received request to activate SIM card with ICCID: {}", request.getIccid());
         SimCardActivationResponse response = simCardActivationService.activateSimCard(request);
